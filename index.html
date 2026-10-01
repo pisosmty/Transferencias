@@ -35,6 +35,18 @@
       background:#6b4a36; color:white; min-width:74px;
     }
     button:active{transform:scale(.98)}
+    details.alt{
+      margin-top:16px; border:1px solid #dfd2c3; border-radius:16px; background:#f7f1ea; overflow:hidden;
+    }
+    details.alt summary{
+      list-style:none; cursor:pointer; padding:15px 16px; font-weight:750; text-align:center; color:#6b4a36;
+    }
+    details.alt summary::-webkit-details-marker{display:none}
+    details.alt[open] summary{border-bottom:1px solid #dfd2c3}
+    .alt-body{padding:4px 12px 14px}
+    .alt-note{text-align:center; font-size:12px; line-height:1.4; color:#8a7465; margin:12px 8px}
+    .alt-bank{text-align:center; font-weight:800; letter-spacing:.8px; color:#6a4b37; margin:12px 0 4px}
+    .alt-holder{text-align:center; font-size:15px; margin-bottom:8px; color:#5a4030}
     .wa{
       display:block; text-align:center; text-decoration:none; margin-top:22px; padding:15px 16px;
       border-radius:14px; background:#4f3b2f; color:white; font-weight:750; font-size:15px;
@@ -90,6 +102,32 @@
       ENVIAR COMPROBANTE POR WHATSAPP
     </a>
     <p class="note">Verifique los datos antes de realizar su transferencia.</p>
+
+    <details class="alt">
+      <summary>CUENTA ALTERNATIVA</summary>
+      <div class="alt-body">
+        <p class="alt-note">Utilice esta cuenta únicamente cuando se le indique.</p>
+        <div class="alt-bank">BANAMEX</div>
+        <div class="alt-holder">Bárbara Arenzana</div>
+
+        <section class="field">
+          <div class="label">Tarjeta</div>
+          <div class="row">
+            <div class="value">5206 9403 0479 5576</div>
+            <button onclick="copyText('5206940304795576')">COPIAR</button>
+          </div>
+        </section>
+
+        <section class="field">
+          <div class="label">CLABE</div>
+          <div class="row">
+            <div class="value">002 580 702273107213</div>
+            <button onclick="copyText('002580702273107213')">COPIAR</button>
+          </div>
+        </section>
+      </div>
+    </details>
+
   </main>
 
   <div class="toast" id="toast">Copiado ✓</div>
